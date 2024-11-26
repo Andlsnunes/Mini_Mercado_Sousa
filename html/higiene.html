@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higiene</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Mini Mercado</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="alimentos.html">Alimentos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="frutas-verduras.html">Frutas e Verduras</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="higiene.html">Higiene</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container py-5">
+            <h1>Produtos de Higiene</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Produtos -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/shampoo.png" class="card-img-top" alt="Shampoo">
+                        <div class="card-body">
+                            <h5 class="card-title">Shampoo R$22,00/cada</h5>
+                            <p class="card-text">Para todos os tipos de cabelo. Dermatologicamente testado.</p>
+                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/sabonete.jpg" class="card-img-top" alt="Shampoo">
+                        <div class="card-body">
+                            <h5 class="card-title">Sabonete R$3,49/cada</h5>
+                            <p class="card-text">Para diversos tipos de peles.</p>
+                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/pasta_de_dente.png" class="card-img-top" alt="Shampoo">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasta de Dente R$13,49/cada</h5>
+                            <p class="card-text">Para manter a limpeza dos dentes e frescor do hálito.</p>
+                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- More products can be added similarly -->
+            </div>
+        </section>
+        <button class="btn btn-secondary mt-3" onclick="window.location.href='index.html'">Voltar ao Início</button>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</html>
