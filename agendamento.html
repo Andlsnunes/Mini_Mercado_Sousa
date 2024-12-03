@@ -1,0 +1,26 @@
+<form id="form-agendamento" class="my-4">
+    <div class="mb-3">
+        <label for="nome-agendamento" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome-agendamento" placeholder="Digite seu nome" required>
+    </div>
+    <div class="mb-3">
+        <label for="tipo-servico" class="form-label">Tipo de Serviço</label>
+        <select id="tipo-servico" class="form-select" required>
+            <option value="">Selecione</option>
+            <option value="retirada">Retirada no Local</option>
+            <option value="entrega">Tele-entrega</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="data-hora" class="form-label">Data e Hora</label>
+        <input type="datetime-local" class="form-control" id="data-hora" required>
+    </div>
+    <div class="mb-3">
+        <label for="observacoes" class="form-label">Observações</label>
+        <textarea class="form-control" id="observacoes" rows="3"></textarea>
+    </div>
+    <div class="d-flex justify-content-between">
+        <button type="reset" class="btn btn-secondary">Cancelar</button>
+        <button type="submit" class="btn btn-success">Agendar</button>
+    </div>
+</form>

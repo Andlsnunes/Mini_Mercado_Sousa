@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Agendamento de Serviços</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Mini Mercado</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="alimentos.html">Alimentos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="frutas-verduras.html">Frutas e Verduras</a></li>
-                        <li class="nav-item"><a class="nav-link" href="higiene.html">Higiene</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="servicos.html">Serviços</a></li>
-                        <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <h1 class="text-center">Mini Mercado Sousa</h1>
+            <nav class="nav justify-content-center">
+                <a class="nav-link text-white" href="index.html">Início</a>
+                <a class="nav-link text-white" href="alimentos.html">Alimentos</a>
+                <a class="nav-link text-white" href="frutas-verduras.html">Frutas e Verduras</a>
+                <a class="nav-link text-white" href="higiene.html">Higiene</a>
+                <a class="nav-link text-white" href="carrinho.html">Carrinho</a>
+                <a class="nav-link text-white" href="cadastro.html">Cadastro</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section class="container py-5">
-            <h1>Nossos Serviços</h1>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <!-- Seerviço -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Retirada no Local</h5>
-                            <p class="card-text">Compre online e retire seu pedido no mercado com agilidade e praticidade.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Tele-entrega</h5>
-                            <p class="card-text">Receba seus produtos no conforto da sua casa com nosso serviço de entrega rápida.</p>
-                        </div>
-                    </div>
-                </div>
+
+    <main class="container my-5">
+        <h2 class="text-center">Agendamento de Serviços</h2>
+        <form id="form-agendamento" class="my-4">
+            <div class="mb-3">
+                <label for="nome-agendamento" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome-agendamento" placeholder="Digite seu nome" required>
             </div>
-        </section>
-        <button class="btn btn-secondary mt-3" onclick="window.location.href='index.html'">Voltar ao Início</button>
+            <div class="mb-3">
+                <label for="tipo-servico" class="form-label">Tipo de Serviço</label>
+                <select id="tipo-servico" class="form-select" required>
+                    <option value="">Selecione</option>
+                    <option value="retirada">Retirada no Local</option>
+                    <option value="entrega">Tele-entrega</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="data-hora" class="form-label">Data e Hora</label>
+                <input type="datetime-local" class="form-control" id="data-hora" required>
+            </div>
+            <div class="mb-3">
+                <label for="observacoes" class="form-label">Observações</label>
+                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="reset" class="btn btn-secondary">Cancelar</button>
+                <button type="submit" class="btn btn-success">Agendar</button>
+            </div>
+        </form>
     </main>
-    <script src="js/script.js"></script>
+
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        © 2024 Mini Mercado Sousa. Todos os direitos reservados.
+    </footer>
+
+    <script src="./js/script.js"></script>
 </body>
+
 </html>

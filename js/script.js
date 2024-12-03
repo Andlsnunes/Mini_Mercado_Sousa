@@ -133,3 +133,26 @@ function finalizarCompra() {
 function voltarInicio() {
     window.location.href = 'index.html';
 }
+
+
+
+// Processa o formulário de agendamento
+document.getElementById("form-agendamento")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Coleta os dados do formulário
+    const nome = document.getElementById("nome-agendamento").value;
+    const tipoServico = document.getElementById("tipo-servico").value;
+    const dataHora = document.getElementById("data-hora").value;
+    const observacoes = document.getElementById("observacoes").value;
+
+    // Armazena os dados no LocalStorage
+    const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
+    agendamentos.push({ nome, tipoServico, dataHora, observacoes });
+    localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
+
+    // Confirmação de sucesso
+    alert(`Agendamento realizado com sucesso!\nNome: ${nome}\nServiço: ${tipoServico}\nData e Hora: ${dataHora}`);
+    window.location.href = "index.html";
+});
+
