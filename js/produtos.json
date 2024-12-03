@@ -1,50 +1,57 @@
 {
     "alimentos": [
-        {
-            "id": 1,
-            "nome": "Arroz",
-            "preco": 5.99,
-            "imagem": "../img/arroz.jpg"
-        },
-        {
-            "id": 2,
-            "nome": "Feijão",
-            "preco": 6.99,
-            "imagem": "../img/feijao.jpg"
-        }
+      {
+        "id": 1,
+        "nome": "Arroz",
+        "preco": 5.99,
+        "imagem": "../img/arroz.jpg"
+      },
+      {
+        "id": 2,
+        "nome": "Feijão",
+        "preco": 6.99,
+        "imagem": "../img/feijao.jpg"
+      }
     ],
     "frutas_verduras": [
-        {
-            "id": 3,
-            "nome": "Maçã",
-            "preco": 3.49,
-            "imagem": "../img/maca.jpg"
-        },
-        {
-            "id": 4,
-            "nome": "Banana",
-            "preco": 2.99,
-            "imagem": "../img/banana.jpg"
-        }
+      {
+        "id": 3,
+        "nome": "Maçã",
+        "preco": 3.49,
+        "imagem": "../img/maca.jpg"
+      },
+      {
+        "id": 4,
+        "nome": "Banana",
+        "preco": 2.99,
+        "imagem": "../img/banana.jpg"
+      },
+      {
+        "id": 5,
+        "nome": "Alface",
+        "preco": 2.49,
+        "imagem": "../img/alface.png"
+      }
     ],
     "higiene": [
-        {
-            "id": 5,
-            "nome": "Shampoo",
-            "preco": 22.00,
-            "imagem": "../img/shampoo.png"
-        },
-        {
-            "id": 6,
-            "nome": "Sabonete",
-            "preco": 3.49,
-            "imagem": "../img/sabonete.jpg"
-        },
-        {
-            "id": 7,
-            "nome": "Pasta de Dente",
-            "preco": 13.49,
-            "imagem": "../img/pasta_de_dente.png"
-        }
+      {
+        "id": 6,
+        "nome": "Shampoo",
+        "preco": 22.00,
+        "imagem": "../img/shampoo.png"
+      },
+      {
+        "id": 7,
+        "nome": "Sabonete",
+        "preco": 3.49,
+        "imagem": "../img/sabonete.jpg"
+      },
+      {
+        "id": 8,
+        "nome": "Pasta de Dente",
+        "preco": 13.49,
+        "imagem": "../img/pasta_de_dente.png"
+      }
     ]
-}
+  }
+  
