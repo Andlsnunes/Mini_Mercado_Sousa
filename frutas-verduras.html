@@ -1,75 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutas e Verduras</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Frutas e Verduras - Mini Mercado Sousa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Mini Mercado</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="alimentos.html">Alimentos</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="frutas-verduras.html">Frutas e Verduras</a></li>
-                        <li class="nav-item"><a class="nav-link" href="higiene.html">Higiene</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                        <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <h1 class="text-center">Frutas e Verduras</h1>
+            <nav class="nav justify-content-center">
+                <a class="nav-link text-white" href="index.html">Home</a>
+                <a class="nav-link text-white" href="alimentos.html">Alimentos</a>
+                <a class="nav-link text-white" href="higiene.html">Higiene</a>
+                <a class="nav-link text-white" href="servicos.html">Serviços</a>
+                <a class="nav-link text-white" href="carrinho.html">Carrinho</a>
+                <a class="nav-link text-white" href="cadastro.html">Cadastro</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section class="container py-5">
-            <h1>Frutas e Verduras</h1>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!-- Produtos-->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="img/maca.jpg" class="card-img-top" alt="Maçã">
-                        <div class="card-body">
-                            <h5 class="card-title">Maçã R$6,98/kg</h5>
-                            <p class="card-text">Fresca e deliciosa. Perfeita para um lanche saudável.</p>
-                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/maca.jpg" class="card-img-top" alt="Maçã">
+                    <div class="card-body">
+                        <h5 class="card-title">Maçã</h5>
+                        <p class="card-text">R$ 3,49</p>
+                        <button class="btn btn-success add-to-cart" onclick="adicionarAoCarrinho(3, 'Maçã', 3.49, '../img/maca.jpg')">Adicionar ao Carrinho</button>
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="img/banana.jpg" class="card-img-top" alt="Maçã">
-                        <div class="card-body">
-                            <h5 class="card-title">Banana R$5,88/kg</h5>
-                            <p class="card-text">Fresca e deliciosa. Perfeita para um lanche saudável.</p>
-                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="img/alface.png" class="card-img-top" alt="Maçã">
-                        <div class="card-body">
-                            <h5 class="card-title">Alface R$1,50</h5>
-                            <p class="card-text">Fresca e deliciosa. Perfeita para um lanche saudável.</p>
-                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
-        <button class="btn btn-secondary mt-3" onclick="window.location.href='index.html'">Voltar ao Início</button>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/banana.jpg" class="card-img-top" alt="Banana">
+                    <div class="card-body">
+                        <h5 class="card-title">Banana</h5>
+                        <p class="card-text">R$ 2,99</p>
+                        <button class="btn btn-success add-to-cart" onclick="adicionarAoCarrinho(4, 'Banana', 2.99, '../img/banana.jpg')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/alface.png" class="card-img-top" alt="Pacote de Feijão">
+                    <div class="card-body">
+                        <h5 class="card-title">Alface</h5>
+                        <p class="card-text">R$ 1,50</p>
+                        <button class="btn btn-success add-to-cart" onclick="adicionarAoCarrinho(2, 'Alface', 1.50, './img/alface.png')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        © 2024 Mini Mercado Sousa. Todos os direitos reservados.
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
