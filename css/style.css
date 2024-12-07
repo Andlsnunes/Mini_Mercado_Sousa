@@ -1,90 +1,67 @@
+/* Estilo geral */
 body {
+    font-family: Arial, sans-serif;
     background: url('../img/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-main {
-    background: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-/* Cabeçalhos */
+/* Cabeçalho */
 header {
-    background: rgba(0, 123, 255, 0.9); /* Azul com opacidade */
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    text-align: center;
-    color: white;
-    margin: 0;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-    color: #eaeaea;
-}
-
-/* Rodapé */
-footer {
-    background: rgba(0, 123, 255, 0.9); /* Azul com opacidade */
+    background-color: #007bff;
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
 }
 
-/* Itens no carrinho */
-.cart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+h2 {
+    color:#ffffff;
 }
 
-.cart-item img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    margin-right: 15px;
-    border-radius: 5px;
+/* Estilização específica para o texto em branco */
+body.cadastro, body.servicos {
+    color: white;
 }
 
-.cart-item-details {
-    flex: 1;
-}
 
-.cart-item button {
-    margin-left: 10px;
-}
 
 /* Botões */
-
 button {
-    background-color: #4CAF50;
-    color: white;
+    margin: 5px;
+    padding: 10px 20px;
     border: none;
-    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    opacity: 0.9;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: white;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
 }

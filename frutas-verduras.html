@@ -1,69 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutas e Verduras - Mini Mercado Sousa</title>
+    <title>Frutas e Verduras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <header class="bg-primary text-white py-3">
-        <div class="container">
-            <h1 class="text-center">Frutas e Verduras</h1>
-            <nav class="nav justify-content-center">
-                <a class="nav-link text-white" href="index.html">Home</a>
-                <a class="nav-link text-white" href="alimentos.html">Alimentos</a>
-                <a class="nav-link text-white" href="higiene.html">Higiene</a>
-                <a class="nav-link text-white" href="servicos.html">Serviços</a>
-                <a class="nav-link text-white" href="carrinho.html">Carrinho</a>
-                <a class="nav-link text-white" href="cadastro.html">Cadastro</a>
-            </nav>
+        <div class="container text-center">
+            <h1>Mini Mercado Sousa - Frutas e Verduras</h1>
         </div>
     </header>
 
     <main class="container my-5">
+        <h2 class="text-center mb-4">Frutas e Verduras Frescas</h2>
         <div class="row">
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-3">
                 <div class="card">
                     <img src="./img/maca.jpg" class="card-img-top" alt="Maçã">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Maçã</h5>
-                        <p class="card-text">R$ 3,49</p>
-                        <button class="btn btn-success add-to-cart" onclick="adicionarAoCarrinho(3, 'Maçã', 3.49, '../img/maca.jpg')">Adicionar ao Carrinho</button>
+                        <p class="card-text">Preço: R$3,49</p>
+                        <button class="btn btn-primary" onclick="adicionarAoCarrinho(3, 'Maçã', 3.49, './img/maca.jpg')">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-3">
                 <div class="card">
                     <img src="./img/banana.jpg" class="card-img-top" alt="Banana">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Banana</h5>
-                        <p class="card-text">R$ 2,99</p>
-                        <button class="btn btn-success add-to-cart" onclick="adicionarAoCarrinho(4, 'Banana', 2.99, '../img/banana.jpg')">Adicionar ao Carrinho</button>
+                        <p class="card-text">Preço: R$2,99</p>
+                        <button class="btn btn-primary" onclick="adicionarAoCarrinho(4, 'Banana', 2.99, './img/banana.jpg')">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="./img/alface.png" class="card-img-top" alt="Pacote de Feijão">
-                    <div class="card-body">
-                        <h5 class="card-title">Alface</h5>
-                        <p class="card-text">R$ 1,50</p>
-                        <button class="btn btn-success add-to-cart" onclick="adicionarAoCarrinho(2, 'Alface', 1.50, './img/alface.png')">Adicionar ao Carrinho</button>
+                    <img src="./img/alface.png" class="card-img-top" alt="Banana">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Banana</h5>
+                        <p class="card-text">Preço: R$2,99</p>
+                        <button class="btn btn-primary" onclick="adicionarAoCarrinho(4, 'Alface', 1.99, './img/alface.png')">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-primary text-white text-center py-3 mt-5">
+    <footer class="bg-primary text-white text-center py-3">
         © 2024 Mini Mercado Sousa. Todos os direitos reservados.
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
-
 </html>

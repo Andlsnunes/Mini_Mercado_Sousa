@@ -1,35 +1,62 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const productList = document.getElementById("product-list");
+// Array para armazenar os itens do carrinho
+let carrinho = [];
 
-    fetch("produtos.json")
-        .then(response => response.json())
-        .then(data => {
-            const currentPage = window.location.pathname.split("/").pop();
-            let products = [];
+// Adicionar item ao carrinho
+function adicionarAoCarrinho(id, nome, preco, imagem) {
+    const itemExistente = carrinho.find(item => item.id === id);
+    if (itemExistente) {
+        itemExistente.quantidade += 1;
+        itemExistente.subtotal = itemExistente.quantidade * itemExistente.preco;
+    } else {
+        carrinho.push({
+            id: id,
+            nome: nome,
+            preco: preco,
+            imagem: imagem,
+            quantidade: 1,
+            subtotal: preco
+        });
+    }
+    alert(`${nome} foi adicionado ao carrinho com sucesso!`);
+    atualizarCarrinho();
+}
 
-            if (currentPage === "alimentos.html") {
-                products = data.alimentos;
-            } else if (currentPage === "frutas-verduras.html") {
-                products = data.frutas_verduras;
-            } else if (currentPage === "higiene.html") {
-                products = data.higiene;
-            }
+// Atualizar exibição do carrinho
+function atualizarCarrinho() {
+    const containerCarrinho = document.getElementById('itens-carrinho');
+    const totalCarrinho = document.getElementById('total-carrinho');
+    containerCarrinho.innerHTML = ''; // Limpar conteúdo atual
+    let total = 0;
 
-            products.forEach(product => {
-                const productDiv = document.createElement("div");
-                productDiv.classList.add("product");
-                productDiv.innerHTML = `
-                    <img src="${product.imagem}" alt="${product.nome}">
-                    <h3>${product.nome}</h3>
-                    <p>Preço: R$${product.preco.toFixed(2)}</p>
-                    <button class="add-to-cart" onclick="adicionarAoCarrinho(${product.id}, '${product.nome}', ${product.preco}, '${product.imagem}')">Adicionar ao Carrinho</button>
-                `;
-                productList.appendChild(productDiv);
-            });
-        })
-        .catch(error => console.error("Erro ao carregar os produtos:", error));
-});
+    carrinho.forEach(item => {
+        const linhaItem = `
+            <tr>
+                <td><img src="${item.imagem}" alt="${item.nome}" style="width: 50px; height: 50px;"></td>
+                <td>${item.nome}</td>
+                <td>${item.quantidade}</td>
+                <td>R$${item.preco.toFixed(2)}</td>
+                <td>R$${item.subtotal.toFixed(2)}</td>
+            </tr>
+        `;
+        containerCarrinho.innerHTML += linhaItem;
+        total += item.subtotal;
+    });
 
+    totalCarrinho.innerText = `Total: R$${total.toFixed(2)}`;
+}
+
+// Redirecionar para a página inicial
 function voltarInicio() {
-    window.location.href = "index.html";
+    window.location.href = 'index.html';
+}
+
+// Finalizar compra
+function finalizarCompra() {
+    if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio!');
+        return;
+    }
+    alert('Compra finalizada com sucesso!');
+    carrinho = [];
+    atualizarCarrinho();
 }
